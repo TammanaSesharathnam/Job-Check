@@ -1,0 +1,17 @@
+/api/admin/activity
+/api/admin/feedback
+/api/admin/jobs
+/api/admin/jobs/<int:job_id>
+/api/admin/logs/<int:log_id>
+/api/admin/retrain
+/api/admin/stats
+/api/admin/users
+/api/admin/users/<int:user_id>
+/api/feedback
+/api/health
+/api/jobs
+/api/login
+/api/predict
+/api/register
+/api/user/history
+/static/<path:filename>

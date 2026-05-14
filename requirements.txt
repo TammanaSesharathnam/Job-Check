@@ -1,0 +1,16 @@
+flask
+flask-cors
+flask-jwt-extended
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+flask-sqlalchemy
+scikit-learn
+pandas
+numpy
+joblib
+nltk

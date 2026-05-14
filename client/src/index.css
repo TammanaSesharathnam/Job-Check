@@ -1,0 +1,71 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-gold-light: #F4C430;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA8C2C;
+
+  --color-dark: #0a0a0a;
+  --color-dark-surface: #121212;
+  --color-dark-border: #2a2a2a;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark);
+    color: white;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .btn-gold {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .btn-gold:hover {
+    background-color: var(--color-gold-light);
+  }
+
+  .input-field {
+    width: 100%;
+    background-color: var(--color-dark-surface);
+    border: 1px solid var(--color-dark-border);
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .input-field:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: var(--color-gold);
+  }
+}

@@ -1,0 +1,87 @@
+============================================================
+DATABASE SCHEMA
+============================================================
+
+TABLE: feedback
+  id                        INTEGER              nullable=False default=None
+  user_id                   INTEGER              nullable=True default=None
+  name                      VARCHAR(100)         nullable=False default=None
+  email                     VARCHAR(120)         nullable=False default=None
+  subject                   VARCHAR(200)         nullable=False default=None
+  message                   TEXT                 nullable=False default=None
+  created_at                DATETIME             nullable=True default=None
+
+TABLE: job_logs
+  id                        INTEGER              nullable=False default=None
+  user_id                   INTEGER              nullable=False default=None
+  job_title                 VARCHAR(200)         nullable=True default=None
+  company                   VARCHAR(100)         nullable=True default=None
+  description               TEXT                 nullable=False default=None
+  result                    VARCHAR(50)          nullable=False default=None
+  confidence                VARCHAR(10)          nullable=False default=None
+  is_flagged                BOOLEAN              nullable=True default=None
+  timestamp                 DATETIME             nullable=True default=None
+
+TABLE: jobs
+  id                        INTEGER              nullable=False default=None
+  title                     VARCHAR(200)         nullable=False default=None
+  company                   VARCHAR(100)         nullable=False default=None
+  location                  VARCHAR(100)         nullable=False default=None
+  salary                    VARCHAR(100)         nullable=False default=None
+  description               TEXT                 nullable=True default=None
+  category                  VARCHAR(100)         nullable=True default=None
+  type                      VARCHAR(50)          nullable=True default=None
+  created_at                DATETIME             nullable=True default=None
+
+TABLE: users
+  id                        INTEGER              nullable=False default=None
+  fullname                  VARCHAR(100)         nullable=True default=None
+  username                  VARCHAR(80)          nullable=False default=None
+  email                     VARCHAR(120)         nullable=False default=None
+  password                  VARCHAR(200)         nullable=False default=None
+  role                      VARCHAR(20)          nullable=True default=None
+  is_admin                  BOOLEAN              nullable=True default=None
+
+============================================================
+USERS TABLE
+============================================================
+Total users: 7
+  id=1 | email=ratna@gmail.com | username=ratna | fullname=ratna | is_admin=False | role=user
+  id=2 | email=sony@gmail.com | username=sony | fullname=sony | is_admin=False | role=user
+  id=3 | email=reddy@gmail.com | username=reddy | fullname=reddy | is_admin=False | role=user
+  id=4 | email=admin@jobcheck.ai | username=admin | fullname=Master Admin | is_admin=True | role=admin
+  id=5 | email=jaan@gmail.com | username=jaan | fullname=jaan | is_admin=False | role=user
+  id=6 | email=jaanu@gmail.com | username=jaanu | fullname=jaanu | is_admin=False | role=user
+  id=7 | email=sesha@gmail.com | username=sesha | fullname=Sesha | is_admin=False | role=user
+
+============================================================
+JOBS TABLE
+============================================================
+Total jobs: 0
+
+============================================================
+FEEDBACK TABLE
+============================================================
+Total feedback: 0
+
+============================================================
+JOB LOGS TABLE
+============================================================
+Total logs: 0
+
+============================================================
+INTEGRITY CHECKS
+============================================================
+Orphan job_logs (no matching user): 0
+Orphan feedback (no matching user): 0
+Duplicate emails: 0
+Duplicate usernames: 0
+
+Admin/role sync check:
+  [OK] id=1 email=ratna@gmail.com is_admin=False role=user
+  [OK] id=2 email=sony@gmail.com is_admin=False role=user
+  [OK] id=3 email=reddy@gmail.com is_admin=False role=user
+  [OK] id=4 email=admin@jobcheck.ai is_admin=True role=admin
+  [OK] id=5 email=jaan@gmail.com is_admin=False role=user
+  [OK] id=6 email=jaanu@gmail.com is_admin=False role=user
+  [OK] id=7 email=sesha@gmail.com is_admin=False role=user
