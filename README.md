@@ -1,50 +1,67 @@
-📌 Overview
+# Job-Check: Fake Job Detection Using NLP
 
-Job-Check is an NLP-based web application that helps users identify fraudulent job postings using Machine Learning and Natural Language Processing techniques. The system analyzes job descriptions, company details, salary information, and other textual features to predict whether a job post is Real or Fake.
+## 📌 Overview
+Job-Check is an NLP-based web application that helps users identify fraudulent job postings using Machine Learning and Natural Language Processing techniques.
+
+The system analyzes job descriptions, company details, salary information, and other textual features to predict whether a job post is **Real** or **Fake**.
 
 The main goal of this project is to protect job seekers from online recruitment scams by providing an intelligent fake job detection platform.
 
-🚀 Features
-Detects fake job postings using NLP and Machine Learning
-Text preprocessing and feature extraction
-Predicts job authenticity in real-time
-User-friendly web interface
-Trained on real-world fake job datasets
-Displays prediction results with accuracy
-🛠️ Technologies Used
-Frontend
-HTML
-CSS
-JavaScript
-Backend
-Python
-Flask
-Machine Learning & NLP
-Scikit-learn
-Pandas
-NumPy
-NLTK
-TF-IDF Vectorizer
-📂 Project Structure
+---
+
+## 🚀 Features
+- Detects fake job postings using NLP and Machine Learning
+- Text preprocessing and feature extraction
+- Predicts job authenticity in real-time
+- User-friendly web interface
+- Trained on real-world fake job datasets
+- Displays prediction results with accuracy
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Python
+- Flask
+
+### Machine Learning & NLP
+- Scikit-learn
+- Pandas
+- NumPy
+- NLTK
+- TF-IDF Vectorizer
+
+---
+
+## 📂 Project Structure
+
+```bash
 job-check/
 │
-├── static/                # CSS and JS files
-├── templates/             # HTML templates
-├── dataset/               # Fake job dataset
-├── model/                 # Trained ML model
-├── app.py                 # Main Flask application
-├── train_model.py         # Model training script
-├── requirements.txt       # Required libraries
+├── static/
+├── templates/
+├── dataset/
+├── model/
+├── app.py
+├── train_model.py
+├── requirements.txt
 └── README.md
-⚙️ How It Works
+How It Works
 User enters job posting details.
 The system preprocesses the text using NLP techniques:
 Tokenization
 Stopword removal
 Stemming/Lemmatization
 TF-IDF converts text into numerical vectors.
-The trained Machine Learning model predicts whether the job post is fake or genuine.
+The ML model predicts whether the job post is fake or genuine.
 The result is displayed to the user.
+
 🧠 Machine Learning Workflow
 Data Preprocessing
 Remove special characters
@@ -62,7 +79,7 @@ Naive Bayes
 Random Forest (optional)
 📊 Dataset
 
-The project uses a fake job postings dataset containing:
+The dataset contains:
 
 Job title
 Company profile
@@ -72,12 +89,12 @@ Salary range
 Employment type
 Fraudulent label
 ▶️ Installation & Setup
-Clone the Repository
+Clone Repository
 git clone https://github.com/your-username/job-check.git
 cd job-check
 Install Dependencies
 pip install -r requirements.txt
-Run the Application
+Run Application
 python app.py
 📈 Future Enhancements
 Deep Learning integration
